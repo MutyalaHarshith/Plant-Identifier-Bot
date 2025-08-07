@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: OCR-Bot
+    plan: free
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 bot.py"
+    envVars:
+      - key: bot_token
+        description: "Telegram Bot token from @BotFather"
+        sync: false
+      - key: t
+        description: "Api key from plantnet.org"
+        sync: false
